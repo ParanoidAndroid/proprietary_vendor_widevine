@@ -13,9 +13,8 @@
 # limitations under the License.
 
 # Widevine blob(s) necessary for Mako hardware
-PRODUCT_PACKAGES := \
-    libdrmdecrypt \
-    libwvdrm_L1 \
-    libWVStreamControlAPI_L1 \
-    libwvm \
-    libdrmwvmplugin
+PRODUCT_COPY_FILES := \
+    vendor/widevine/mako/proprietary/libwvdrm_L1.so:system/lib/libwvdrm_L1.so:widevine \
+    vendor/widevine/mako/proprietary/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so:widevine \
+    vendor/widevine/mako/proprietary/libwvm.so:system/lib/libwvm.so:widevine \
+    vendor/widevine/mako/proprietary/libdrmwvmplugin.so:system/lib/libdrmwvmplugin.so:widevine \
